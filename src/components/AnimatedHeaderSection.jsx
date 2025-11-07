@@ -43,19 +43,18 @@ const AnimatedHeaderSection = ({
       <div style={{ clipPath: "polygon(0 0,100% 0,100% 100%,0 100%)" }}>
         <div
           ref={headerRef}
-          className="flex flex-col justify-center lg:gap-14 gap-10  !px-5  sm:gap-16"
+          className="flex flex-col justify-center lg:gap-14 gap-7  !px-5  sm:gap-16"
         >
           <p
-            className={`text-[2.5vw] lg:text-[1vw] sm:text-[2.8vw] md:text-[1.1vw]  font-montserrat md:pl-2  pt-18 tracking-[0.5rem] uppercase  ${textColor}`}
+            className={`text-[1.5vw] lg:text-[1vw] sm:text-[2.8vw] md:text-[1.1vw]  font-montserrat md:pl-2 pt-10 sm:pt-18 tracking-[0.3rem] sm:tracking-[0.5rem] uppercase  ${textColor}`}
           >
             {/* */}
             {subTitle}
           </p>
           <div className="">
             <h1
-              className={`flex flex-col flex-wrap font-bebas font-bold text-5xl  ${textColor} uppercase sm:text-3xl md:text-7xl  lg:text-[8vw] sm:gap-11  md:block leading-[8vw] md:leading-[4.4vw] `}
+              className={`flex flex-col flex-wrap font-bebas font-bold text-5xl  ${textColor} uppercase sm:text-3xl md:text-7xl  lg:text-[8vw] sm:gap-11  md:block leading-[7vw] md:leading-[4.4vw] `}
             >
-              {/* */}
               {title}
             </h1>
           </div>
@@ -66,7 +65,7 @@ const AnimatedHeaderSection = ({
           <div className=" !py-10 sm:py-16 text-end">
             <AnimatedTextLines
               text={text}
-              className={`${textColor} font-medium font-montserrat  uppercase px-10 text-xs sm:text-[2.5vw] md:text-xl lg:text-xl`}
+              className={`${textColor} font-medium font-montserrat  uppercase px-10 text-[2.4vw] sm:text-[2.5vw] md:text-xl lg:text-2xl`}
             />
           </div>
         </div>

@@ -84,9 +84,10 @@ export const projects = [
     name: "Mobile Accessories E-commerce",
     description:
       "An online store specializing in phone accessories including cases, chargers, cables, and power banks with MagSafe compatibility.",
-    href: "",
+    href: "https://world-atlas-dsr.netlify.app/",
     image: "/assets/projects/mobile-accessories-store.jpg",
     bgImage: " /assets/backgrounds/blanket.jpg",
+
     frameworks: [
       { id: 1, name: "React" },
       { id: 2, name: "Next.js" },
@@ -120,8 +121,8 @@ export const projects = [
     bgImage: "/assets/backgrounds/map.jpg",
     frameworks: [
       { id: 1, name: "Html" },
-      { id: 1, name: "Java Script" },
-      { id: 4, name: "Bootstrap" },
+      { id: 2, name: "Java Script" },
+      { id: 3, name: "Bootstrap" },
     ],
   },
   {
@@ -135,7 +136,7 @@ export const projects = [
     frameworks: [
       { id: 1, name: "Netx.js" },
       { id: 2, name: "Gsap" },
-      { id: 4, name: "Motion" },
+      { id: 3, name: "Motion" },
     ],
   },
   {
@@ -176,7 +177,7 @@ export const socials = [
     name: "LinkedIn",
     href: "https://www.linkedin.com/in/deepak-singh-rawat-b36823202/",
   },
-  
+
   { name: "GitHub", href: "https://github.com/Deepakingh07" },
 ];
-// 
+//

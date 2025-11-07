@@ -9,13 +9,17 @@ const Hero = () => {
   return (
     <section
       id="home"
-      className="relative flex flex-col justify-center min-h-screen overflow-hidden"
+      className="inset-0 bg-gradient-to-br from-[#1f1f1f] to-black -z-20
+      relative flex flex-col justify-center min-h-screen overflow-hidden"
     >
       {/* Background Image */}
       <img
         src="/assets/myimg/image.gif"
         alt=""
-        className="w-[200px] lg:w-[400px] rounded-xl absolute right-12 bottom-[37%] z-10"
+        className="
+  w-[250px] sm:w-[230px] md:w-[350px] lg:w-[400px] rounded-xl
+  max-[600px]:mx-auto max-[600px]:relative max-[600px]:mb-6
+  sm:absolute sm:bottom-[37%]  sm:right-12 sm:mx-0 sm:mb-0 z-10"
       />
 
       {/* Main Content */}
@@ -23,13 +27,15 @@ const Hero = () => {
         <AnimatedHeaderSection
           subTitle="404 No Bugs Found"
           title={
-            <TextType
-              text={["Deepak Singh Rawat"]}
-              typingSpeed={75}
-              pauseDuration={1500}
-              showCursor={false}
-              cursorCharacter="|"
-            />
+            <div className="sm:h-[50px] h-[20px] text-3xl sm:text-[7vw] md:text-[7.1vw] md:justify-start lg:text-[7vw] flex items-center justify-start lg:justify-start  ">
+              <TextType
+                text={["Deepak Singh Rawat"]}
+                typingSpeed={75}
+                pauseDuration={1500}
+                showCursor={false}
+                cursorCharacter="|"
+              />
+            </div>
           }
           text={text}
           textColor="text-[#87e64b]"

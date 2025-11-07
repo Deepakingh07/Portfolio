@@ -39,7 +39,7 @@ const TextType = ({
   return (
     <span className="inline-block">
       {`${text[index]?.substring(0, subIndex)}`}
-      {showCursor && <span className="animate-pulse">{cursorCharacter}</span>}
+      {showCursor && <span className="animate-pulse ">{cursorCharacter}</span>}
     </span>
   );
 };

@@ -16,16 +16,16 @@ const App = () => {
   return (
     <ReactLenis root className="relative w-screen min-h-screen overflow-x-auto">
       {/* {loadingComplete ? ( */}
-      <div>
-        <Navbar />
-        <Hero />
-        {/* <ServiceSummary /> */}
-        <Services />
-        <About />
-        <Work />
-        <ContactSummary />
-        <Contact />
-      </div>
+        <div>
+          <Navbar />
+          <Hero />
+          {/* <ServiceSummary /> */}
+          <Services />
+          <About />
+          <Work />
+          <ContactSummary />
+          <Contact />
+        </div>
       {/* ) : (
         <Loader onComplete={() => setLoadingComplete(true)} />
       )} */}

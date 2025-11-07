@@ -17,6 +17,7 @@ const Navbar = () => {
   const [showBurger, setShowBurger] = useState(true);
 
   useGSAP(() => {
+    if (!navRef.current || !contactRef.current) return;
     // Set initial styles
     gsap.set(navRef.current, { xPercent: 100 });
     gsap.set(linksRef.current, { autoAlpha: 0, y: -20, rotateX: 90 });
@@ -58,22 +59,24 @@ const Navbar = () => {
 
     // Burger icon animation
     iconTl.current = gsap.timeline({ paused: true });
-    iconTl.current.to(topLineRef.current, {
-      rotate: 45,
-      y: 10,
-      duration: 0.3,
-      ease: "power2.inOut",
-    });
-    iconTl.current.to(
-      bottomLineRef.current,
-      {
-        rotate: -45,
-        y: -5,
+    if (topLineRef.current && bottomLineRef.current) {
+      iconTl.current.to(topLineRef.current, {
+        rotate: 45,
+        y: 10,
         duration: 0.3,
         ease: "power2.inOut",
-      },
-      "<"
-    );
+      });
+      iconTl.current.to(
+        bottomLineRef.current,
+        {
+          rotate: -45,
+          y: -5,
+          duration: 0.3,
+          ease: "power2.inOut",
+        },
+        "<"
+      );
+    }
   }, []);
 
   // Show/hide burger on scroll
@@ -154,6 +157,7 @@ const Navbar = () => {
                 <a
                   key={index}
                   href={social.href}
+                  target="_blank"
                   className="text-sm leading-loose tracking-widest uppercase text-white hover:text-[#87e64b] transition-colors duration-300"
                 >
                   {"{"}
@@ -178,13 +182,19 @@ const Navbar = () => {
         {!isOpen ? (
           <>
             {/* Burger Icon */}
-            <span className="block w-8 h-0.5 bg-[#87e64b] rounded-full origin-center" />
+            <span
+              ref={topLineRef}
+              className="block w-8 h-0.5 bg-[#87e64b] rounded-full origin-center"
+            />
             <span className="block w-8 h-0.5 bg-[#87e64b] rounded-full origin-center" />
           </>
         ) : (
           <>
             {/* Cross Icon */}
-            <span className="block w-8 h-0.5 bg-[#87e64b] rounded-full origin-center rotate-45 translate-y-2" />
+            <span
+              ref={bottomLineRef}
+              className="block w-8 h-0.5 bg-[#87e64b] rounded-full origin-center rotate-45 translate-y-2"
+            />
             <span className="block w-8 h-0.5 bg-[#87e64b] rounded-full origin-center -rotate-45 -translate-y-2" />
           </>
         )}

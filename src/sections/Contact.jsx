@@ -32,7 +32,8 @@ const Contact = () => {
   return (
     <section
       id="contact"
-      className="flex flex-col  justify- border-[#87e64b] border-t-2 min-h-screen bg-black"
+      className="inset-0 bg-gradient-to-br from-[#1f1f1f] to-black -z-20
+      flex flex-col   justify- border-[#87e64b] border-t-2 min-h-screen bg-black"
     >
       <div>
         <AnimatedHeaderSection
@@ -80,9 +81,12 @@ const Contact = () => {
           </div>
         </div>
       </div>
-      <Marquee items={item} className="text-[#87e64b] border-[#87e64b] border-b-0 border-t-2  bg-transparent" />
+      <Marquee
+        items={item}
+        className="text-[#87e64b] border-[#87e64b] border-b-0 border-t-2  bg-transparent"
+      />
     </section>
   );
-}; 
+};
 
 export default Contact;

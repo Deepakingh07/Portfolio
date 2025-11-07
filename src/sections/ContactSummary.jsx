@@ -6,6 +6,7 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 const ContactSummary = () => {
   const containerRef = useRef(null);
+  const textRef = useRef(null);
   const items = [
     "Innovation",
     "Precision",
@@ -25,19 +26,19 @@ const ContactSummary = () => {
     gsap.registerPlugin(ScrollTrigger);
 
     // Pinning section
-    ScrollTrigger.create({
-      trigger: containerRef.current,
-      start: "top top",
-      // end: "+=600",
-      pin: true,
-      pinSpacing: true,
-      scrub: 0.5,
-    });
+    // ScrollTrigger.create({
+    //   trigger: containerRef.current,
+    //   start: "top top",
+    //   // end: "+=600",
+    //   pin: true,
+    //   pinSpacing: true,
+    //   scrub: 0.5,
+    // });
 
     // Fade + slide in text
     gsap.fromTo(
-      ".contact-text-responsive",
-      { opacity: 0, y: 50 },
+      textRef.current,
+      { opacity: 0, y:50 },
       {
         opacity: 1,
         y: 0,
@@ -58,12 +59,18 @@ const ContactSummary = () => {
       className="flex flex-col w-screen overflow-hidden font-montserrat items-center justify-between min-h-screen gap-1 mt-2 "
     >
       {/* First marquee tilted left */}
-      <div className=" lg:-rotate-10 -rotate-24 mt-30 text-[#87e64b] ">
-        <Marquee items={items} className=" text-[#87e64b] bg-transparent border-y-2" />
+      <div className=" lg:-rotate-9 md:-rotate-13 sm:-rotate-16 -rotate-16 mt-30 text-[#87e64b] ">
+        <Marquee
+          items={items}
+          className=" text-[#87e64b] bg-transparent border-y-2"
+        />
       </div>
 
       {/* Center text */}
-      <div className="overflow-hidden font-light text-center text-xl pl-1">
+      <div
+        ref={textRef}
+        className="overflow-hidden font-light text-center text-xl pl-1"
+      >
         <p>
           “ Let’s build a <br />
           <span className="font-normal">memorable</span> &{" "}
@@ -73,7 +80,7 @@ const ContactSummary = () => {
       </div>
 
       {/* Second marquee tilted right */}
-      <div className="rotate-29  lg:rotate-8 ">
+      <div className="rotate-15  sm:rotate-12   md:rotate-11  lg:rotate-8">
         <Marquee
           items={items2}
           reverse={true}
