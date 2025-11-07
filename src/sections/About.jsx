@@ -79,7 +79,7 @@ const About = () => {
           />
 
           <a
-            href="/assets/mycv/Deepak_CV.pdf"
+            href="/assets/mycv/Deepak Singh Rawat.pdf"
             download
             className=" text-[4vw] sm:text-2xl  px-3 py-1 bg-white/20 text-[#87e64b] font-semibold rounded-xs sm:rounded-xl shadow-lg 
             hover:bg-neutral-50 hover:text-black/80 transition-all duration-300"

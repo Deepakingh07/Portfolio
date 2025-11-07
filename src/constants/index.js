@@ -168,7 +168,7 @@ export const projects = [
   },
 ];
 export const socials = [
-  { name: "Instagram", href: "https://www.instagram.com/ali.sanatidev/reels/" },
+  { name: "Instagram", href: "https://www.instagram.com/singh_deepak11/" },
 
   {
     name: "LinkedIn",
