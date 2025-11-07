@@ -15,7 +15,7 @@ const App = () => {
 
   return (
     <ReactLenis root className="relative w-screen min-h-screen overflow-x-auto">
-      {/* {loadingComplete ? ( */}
+      {loadingComplete ? (
         <div>
           <Navbar />
           <Hero />
@@ -26,9 +26,9 @@ const App = () => {
           <ContactSummary />
           <Contact />
         </div>
-      {/* ) : (
+      ) : (
         <Loader onComplete={() => setLoadingComplete(true)} />
-      )} */}
+      )}
     </ReactLenis>
   );
 };
