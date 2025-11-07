@@ -59,8 +59,8 @@ const Work = () => {
 
     const imgWidth = 420;
     const imgHeight = 180;
-    let x = e.clientX - rect.left - imgWidth / 2;
-    let y = e.clientY - rect.top - imgHeight / 2 - 40;
+    let x = e.clientX - rect.left - imgWidth / 9;
+    let y = e.clientY - rect.top - imgHeight / 1.2 - 40;
 
     const viewportWidth = window.innerWidth;
     const viewportHeight = window.innerHeight;
@@ -78,7 +78,7 @@ const Work = () => {
     gsap.to(img, {
       x,
       y,
-      duration: 0.4,
+      duration: 1,
       ease: "power4.out",
     });
 
@@ -159,7 +159,7 @@ const Work = () => {
         withScrollTrigger={true}
       />
 
-      <div className="relative flex flex-col mt-34  sm:mt-48 gap-5 lg:gap-1 font-light">
+      <div className="projcards relative  flex flex-col mt-34  sm:mt-48 gap-5 lg:gap-1 font-light">
         {projects.map((project, index) => (
           <a href={project.href} key={project.id} target="_blank">
             <div
@@ -190,11 +190,11 @@ const Work = () => {
                 ))}
               </div>
 
-              <div className="lg:hidden w-full mt-4">
+              <div className="lg:hidden  w-full mt-4">
                 <img
                   src={project.image}
                   alt={project.name}
-                  className="w-full rounded-xl border border-[#87e64b]/60 object-cover shadow-lg"
+                  className="w-full rounded-xl border  border-[#87e64b]/60 object-cover shadow-lg"
                 />
               </div>
 
@@ -205,7 +205,7 @@ const Work = () => {
                 <img
                   src={project.image}
                   alt={project.name}
-                  className="object-cover w-[420px] rounded-xl"
+                  className="object-cover  w-[420px] rounded-xl"
                 />
               </div>
             </div>
